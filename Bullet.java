@@ -1,7 +1,7 @@
 import java.awt.Color;
 
 public class Bullet {
-
+	
 	private PixelGrid grid;
 	private Location location; // location that the head of the bullet currently occupies
 	private String direction;  // direction of bullet, either NORTH or SOUTH, (90 = north, 270 = south)

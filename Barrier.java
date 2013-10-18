@@ -1,7 +1,11 @@
 import java.awt.Color;
 
 public class Barrier {
-
+	
+	/* Handles the drawing and managing of the three barriers that sit right above the player on the screen. Most of 
+	 * the calls to Barrier objects are going to be through the bulletManager when a bullet detects it has hit a barrier.
+	 */
+	
 	private PixelGrid grid;
 	private int[][] state;
 	private Location location;
@@ -52,6 +56,7 @@ public class Barrier {
 		return false;
 	}
 
+	//a bullet has hit this barrier, detected at Location loc, traveling direction
 	public void hitBarrier(Location loc, String direction) {
 		if (direction.equals("SOUTH")) {
 			// make sure we are hitting the uppermost loc in the column that we can
